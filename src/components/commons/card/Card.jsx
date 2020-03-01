@@ -6,15 +6,12 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
 } from "reactstrap";
 import Modal from "../Modal";
 
 import "./Card.scss";
 
 const CatCard = ({ catData }) => {
-  // console.log(cats);
-
   return (
     <div className="card-img mt-5">
       {catData.map((item, index) => (
@@ -34,7 +31,7 @@ const CatCard = ({ catData }) => {
               {item.temperament}
             </CardSubtitle>
             <CardText>
-              <span>Description: </span> {item.description}
+              {/* <span>Description: </span> {item.description} */}
             </CardText>
             <div className="catLifeSpan">
               {" "}
@@ -52,8 +49,7 @@ const CatCard = ({ catData }) => {
               <span>Child friendly: </span>
               {item.child_friendly}
             </div>
-            <Modal />
-            {/* <Button>Button</Button> */}
+            <Modal item={item}/>
           </CardBody>
         </Card>
       ))}
