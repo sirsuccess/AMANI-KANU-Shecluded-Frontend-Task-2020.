@@ -1,8 +1,11 @@
-import React from "react"
+import React from "react";
 
-import Navbar from "../../components/features/navbar/navbar"
+import Carousel from "../../components/commons/Carousel";
 
 export default function Home() {
-
-    return( Navbar)
+  return (
+    <div>
+      <Carousel />
+    </div>
+  );
 }
