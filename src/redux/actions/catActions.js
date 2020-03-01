@@ -3,13 +3,17 @@ import {
   FETCH_CAT_REQUEST,
   FETCH_CAT_SUCCESS,
   FETCH_CAT_FAILURE
-} from "./userTypes";
+} from "../types/catTypes";
 
 export const fetchCat = () => {
   return dispatch => {
     dispatch(fetchCatRequest());
     axios
-      .get("https://jsonplaceholder.typicode.com/user")
+      .get(process.env.REACT_APP_CAT_API_ENDPOINT, {
+        headers: {
+          "x-api-key": `${process.env.REACT_APP_CAT_API_KEY}` //the token is a variable which holds the token
+        }
+      })
       .then(response => {
         // response.data is the CAT
         const cat = response.data;
