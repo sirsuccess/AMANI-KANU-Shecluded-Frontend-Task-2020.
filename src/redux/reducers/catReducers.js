@@ -15,7 +15,8 @@ import {
       case FETCH_CAT_REQUEST:
         return {
           ...state,
-          loading: true
+          loading: true,
+          error: ''
         }
       case FETCH_CAT_SUCCESS:
         return {
