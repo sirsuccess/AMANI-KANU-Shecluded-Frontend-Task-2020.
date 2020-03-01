@@ -8,7 +8,7 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
-import Modal from "../Modal"
+import Modal from "../Modal";
 
 import "./Card.scss";
 
@@ -52,7 +52,7 @@ const CatCard = ({ catData }) => {
               <span>Child friendly: </span>
               {item.child_friendly}
             </div>
-<Modal/>
+            <Modal />
             {/* <Button>Button</Button> */}
           </CardBody>
         </Card>
