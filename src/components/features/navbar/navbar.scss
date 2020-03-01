@@ -30,6 +30,17 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
+
+.nav-section {
+  position: relative;
+}
+.stick-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  background-color: yellow;
+  border: 2px solid black;
+}
 // .sticky {
 //     position: fixed !important;
 //     top: 0;
@@ -134,3 +145,20 @@ button {
 }
 
 /* end of navbar */
+
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
+
+.navbar-brand span {
+  color: #fed136;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
