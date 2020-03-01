@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Provider } from "react-redux";
 import "./App.css";
@@ -9,7 +8,7 @@ import AppRoute from "./routes/index";
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="container">
         <AppRoute />
       </div>
     </Provider>
@@ -17,4 +16,3 @@ function App() {
 }
 
 export default App;
-
