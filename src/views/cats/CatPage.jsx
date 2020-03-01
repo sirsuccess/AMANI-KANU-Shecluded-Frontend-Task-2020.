@@ -1,45 +1,31 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Pagination from "react-js-pagination";
+import { useDispatch, useSelector } from "react-redux";
 
+import { fetchCat } from "../../redux/actions/catActions";
 import Card from "../../components/commons/card/Card";
-// import Pagination from "../../components/commons/Pagination/Pagination";
 import Spinner from "../../components/commons/spinner";
-window.React = React;
 
 export default function CatPage() {
-  const [catData, setCatData] = useState([]);
-  const [showSpinner, setShowSpinner] = useState(false);
+  //initialize useDispatch
+  const dispatch = useDispatch();
 
+  //get cats from store
+  const catDataFromAPI = useSelector(state => state.cat);
+  const { loading, cats, error } = catDataFromAPI;
+
+  //pagination
   const [currentPage, setCurrentPage] = useState(1);
   const [dataPerPage, setDataPerPage] = useState(5);
   const [numPage, setNumPage] = useState(dataPerPage);
-
   const indexOfLastData = currentPage * dataPerPage;
   const indexOfFirstData = indexOfLastData - dataPerPage;
-  const currentPost = catData.slice(indexOfFirstData, indexOfLastData);
+  const currentPost = cats.slice(indexOfFirstData, indexOfLastData);
 
   useEffect(() => {
-    axios
-      .get("https://api.thecatapi.com/v1/breeds", {
-        headers: {
-          "x-api-key": "42a61d51-9255-43e7-8f8c-cdd66409c268" //the token is a variable which holds the token
-        }
-      })
-      .then(response => {
-        // response.data is the CAT
-        const cat = response.data;
-        setCatData(cat);
-        // console.log(cat);
-        setShowSpinner(true);
-        // dispatch(fetchCatDatauccess(cat));
-      })
-      .catch(error => {
-        console.log(error);
-
-        // error.message is the error message
-        // dispatch(fetchCatFailure(error.message));
-      });
+    //dispatch fetchCat
+    dispatch(fetchCat());
   }, []);
 
   useEffect(() => {
@@ -52,7 +38,7 @@ export default function CatPage() {
 
   return (
     <div>
-      {!showSpinner ? (
+      {loading ? (
         <Spinner />
       ) : (
         <div>
@@ -64,7 +50,7 @@ export default function CatPage() {
               pageRangeDisplayed={5}
               activePage={currentPage}
               itemsCountPerPage={dataPerPage}
-              totalItemsCount={catData.length}
+              totalItemsCount={cats.length}
               onChange={paginate}
               prevPageText="<"
               nextPageText=">"
