@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 const ModalExample = ({ item, props }) => {
-  console.log(item);
-
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
