@@ -6,13 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import CurrentDate from "../../commons/Date";
 import "./navbar.scss";
 
@@ -60,25 +56,29 @@ const Example = props => {
       </div>
       <div className="stick-top">
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/" className="navbar-brand"><span>React</span> API
+          <NavbarBrand href="/" className="navbar-brand">
+            <span>React</span> API
             {/* <div class="logo second"> REACT API</div> */}
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <Collapse isOpen={isOpen} navbar className="mt-4">
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/cats">Cats</NavLink>
+                <Link to="/cats">Cats</Link>
               </NavItem>
-              <NavItem>
-                <NavLink href="/lotr">LOTR</NavLink>
+              <NavItem className="ml-3">
+                <Link to="/lotr">LOTR</Link>
               </NavItem>
             </Nav>
-            <NavbarText className="mr-3"><NavLink href="/login">Login</NavLink></NavbarText>
-            <NavbarText><NavLink href="/register">Sign up</NavLink></NavbarText>
+            <NavbarText className="mr-3">
+              <Link to="/login">Login</Link>
+            </NavbarText>
+            <NavbarText>
+              <Link to="/register">Sign up</Link>
+            </NavbarText>
           </Collapse>
         </Navbar>
       </div>
-  
     </div>
   );
 };
