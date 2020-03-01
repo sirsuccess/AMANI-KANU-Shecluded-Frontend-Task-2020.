@@ -8822,14 +8822,6 @@ react-dom@^16.13.0:
     prop-types "^15.6.2"
     scheduler "^0.19.0"
 
-react-epic-spinners@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/react-epic-spinners/-/react-epic-spinners-0.4.1.tgz#593fcdbcef79ddb9b8879662b637844dbf46afad"
-  integrity sha512-DFJu8GEh2Zx9i5DF0Hqw7IIgAAqjJV5UGqhrSIM9ip+4FO1lvFmZ+7iDXJJFPhqKTP0ucSULqjPojxARomZVwg==
-  dependencies:
-    react ">=0.14.x"
-    styled-components ">=2.4.0"
-
 react-error-overlay@^6.0.6:
   version "6.0.6"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.6.tgz#ac4d9dc4c1b5c536c2c312bf66aa2b09bfa384e2"
@@ -9003,7 +8995,7 @@ react-transition-group@^2.3.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-"react@15.x.x - 16.x.x", react@>=0.14.x, react@^16.13.0:
+"react@15.x.x - 16.x.x", react@^16.13.0:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.0.tgz#d046eabcdf64e457bbeed1e792e235e1b9934cf7"
   integrity sha512-TSavZz2iSLkq5/oiE7gnFzmURKZMltmi193rm5HEoUDAXpzT9Kzw6oNZnGoai/4+fUnm7FqS5dwgUL34TujcWQ==
@@ -10271,7 +10263,7 @@ style-loader@0.23.1:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
-styled-components@>=2.4.0, styled-components@^5.0.1:
+styled-components@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-5.0.1.tgz#57782a6471031abefb2db5820a1876ae853bc619"
   integrity sha512-E0xKTRIjTs4DyvC1MHu/EcCXIj6+ENCP8hP01koyoADF++WdBUOrSGwU1scJRw7/YaYOhDvvoad6VlMG+0j53A==
