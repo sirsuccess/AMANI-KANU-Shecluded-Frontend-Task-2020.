@@ -1,0 +1,24 @@
+.what-we-do {
+  margin-top: 50px;
+  margin-bottom: 100px;
+
+  .what-we-do h1 {
+    color: #fb0200;
+  }
+
+  .card-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card {
+      color: #fff;
+      padding-bottom: 10px;
+      text-align: center;
+      margin-top: 1em;
+      .card-img {
+        width: 250px;
+      }
+    }
+  }
+}
