@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Pagination from "react-js-pagination";
 import { useDispatch, useSelector } from "react-redux";
 
 import { fetchCat } from "../../redux/actions/catActions";
 import Card from "../../components/commons/card/Card";
 import Spinner from "../../components/commons/spinner";
+import ErrorMsg from "../../components/commons/Eroor";
+
 
 export default function CatPage() {
   //initialize useDispatch
@@ -14,6 +15,7 @@ export default function CatPage() {
   //get cats from store
   const catDataFromAPI = useSelector(state => state.cat);
   const { loading, cats, error } = catDataFromAPI;
+
 
   //pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -40,6 +42,8 @@ export default function CatPage() {
     <div>
       {loading ? (
         <Spinner />
+      ) : error ? (
+        <ErrorMsg />
       ) : (
         <div>
           <Card catData={currentPost} />

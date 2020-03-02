@@ -9,10 +9,11 @@ import {
   NavbarText
 } from "reactstrap";
 import { Link } from "react-router-dom";
+
 import CurrentDate from "../../commons/Date";
 import "./navbar.scss";
 
-const Example = props => {
+const AppNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -44,7 +45,6 @@ const Example = props => {
             </a>
           </div>
           <div className="top-navbar-dropdown" id="top-navbar-dropdown">
-            {/* <!-- Eng <i className="fas fa-angle-down"></i> --> */}
             <select name="lang" className="dropdown">
               <option value="Eng">Eng</option>
               <option value="Fr">Fr</option>
@@ -58,7 +58,6 @@ const Example = props => {
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/" className="navbar-brand">
             <span>React</span> API
-            {/* <div class="logo second"> REACT API</div> */}
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar className="mt-4">
@@ -83,4 +82,4 @@ const Example = props => {
   );
 };
 
-export default Example;
+export default AppNavbar;

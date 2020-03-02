@@ -6,9 +6,7 @@ const NotFound = () => {
     <div>
       <Alert color="success">
         <h4 className="alert-heading">Oop! page Not found</h4>
-        <p>
-          kindly check URL address. you may mistype it.
-        </p>
+        <p>kindly check URL address.</p>
       </Alert>
     </div>
   );
