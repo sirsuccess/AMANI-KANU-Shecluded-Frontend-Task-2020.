@@ -8,7 +8,7 @@ import {
   NavItem,
   NavbarText
 } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import CurrentDate from "../../commons/Date";
 import "./navbar.scss";
@@ -63,17 +63,17 @@ const AppNavbar = props => {
           <Collapse isOpen={isOpen} navbar className="mt-4">
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <Link to="/cats">Cats</Link>
+                <NavLink to="/cats">Cats</NavLink>
               </NavItem>
               <NavItem className="ml-3">
-                <Link to="/lotr">LOTR</Link>
+                <NavLink to="/lotr">LOTR</NavLink>
               </NavItem>
             </Nav>
             <NavbarText className="mr-3">
-              <Link to="/login">Login</Link>
+              <NavLink to="/login">Login</NavLink>
             </NavbarText>
             <NavbarText>
-              <Link to="/register">Sign up</Link>
+              <NavLink to="/register">Sign up</NavLink>
             </NavbarText>
           </Collapse>
         </Navbar>
