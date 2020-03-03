@@ -8,7 +8,7 @@ import {
   NavItem,
   NavbarText
 } from "reactstrap";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import CurrentDate from "../../commons/Date";
 import "./navbar.scss";
