@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when called  1`] = `
+<div>
+  <div
+    className="alert alert-success fade"
+    role="alert"
+  >
+    <h4
+      className="alert-heading"
+    >
+      Oop! page Not found
+    </h4>
+    <p>
+      kindly check URL address. you may mistype it.
+    </p>
+  </div>
+</div>
+`;

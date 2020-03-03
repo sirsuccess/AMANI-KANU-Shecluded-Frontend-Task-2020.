@@ -1,164 +1,63 @@
-* {
-  padding: 0;
-  margin: 0;
-  border: none;
-  list-style: none;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-decoration: none;
-  text-decoration-color: #000;
-  /* default CSS page setting */
-}
-
-a {
-  color: #000 !important;
-}
-
-a:hover {
-  color: #ff7200 !important;
-}
-
-img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
-}
-
-button {
-  outline: none;
-  outline-color: transparent;
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .nav-section {
   position: relative;
-}
-.stick-top {
-  position: -webkit-sticky !important;
-  position: sticky !important;
-  top: 0;
-  background-color: yellow;
-  border: 2px solid black;
-}
-// .sticky {
-//     position: fixed !important;
-//     top: 0;
-//     // width: 100%;
-// }
-// .container {
-//     max-width: 1100px;
-//     /* width: 70%; */
-//     /* background-color: #ff7200; */
-//     margin: 0 auto;
-//     margin-bottom: 5em;
-// }
+  .collapse {
+    margin-bottom: 20px;
+  }
+  .stick-top {
+    border: 1px solid black;
+    .navbar-brand {
+      color: #fff;
+      font-size: 25px;
+      font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      span {
+        color: #fed136;
+      }
+    }
+    
+    .active {
+      color: #ff7200 !important;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+  .top-navbar {
+    border-bottom: 1px solid #cecccc !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    display: flex !important;
+    padding: 5px !important;
+    margin-bottom: 10px !important;
+    width: 100% !important;
+    .top-navbar-text {
+      border: 1px solid #00acee !important;
+      border-radius: 3px !important;
+      padding: 0 0.5rem !important;
+      font-size: 14px !important;
+      .date {
+        font-weight: 600 !important;
+      }
+    }
+    .social-media {
+      font-size: 30px !important;
+      width: 100px !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      .fa-facebook-square {
+        color: #3b5998 !important;
+        cursor: pointer !important;
+      }
+      .fa-twitter-square {
+        color: #00acee !important;
+        cursor: pointer !important;
+      }
+      .fa-instagram {
+        color: #e1306c !important;
+        cursor: pointer !important;
+      }
+    }
+  }
 
-.collapse {
-  margin-bottom: 20px;
-}
-
-.top-navbar {
-  border-bottom: 1px solid #cecccc !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  display: flex !important;
-  padding: 5px !important;
-  margin-bottom: 20px !important;
-  width: 100% !important;
-}
-
-.top-navbar-text {
-  border: 1px solid #00acee !important;
-  border-radius: 3px !important;
-  padding: 0 0.5rem !important;
-  font-size: 14px !important;
-}
-
-.date {
-  font-weight: 600 !important;
-}
-
-.social-media {
-  font-size: 30px !important;
-  width: 100px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-}
-
-.fa-facebook-square {
-  color: #3b5998 !important;
-  cursor: pointer !important;
-}
-
-.fa-twitter-square {
-  color: #00acee !important;
-  cursor: pointer !important;
-}
-
-.fa-instagram {
-  color: #e1306c !important;
-  cursor: pointer !important;
-}
-
-.top-navbar-dropdown {
-  /* margin-left: auto !important; */
-}
-
-.first {
-  display: none !important;
-}
-
-.navbar-dark {
-  position: sticky !important;
-  top: 0 !important;
-  background-color: #fff !important;
-  z-index: 100 !important;
-}
-
-.navbar-link {
-  /* margin: 0 auto !important; */
-  font-size: 13px !important;
-}
-
-.navbar-link ul {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  margin-top: -15px !important;
-}
-
-.navbar-link ul li:hover {
-  color: #ff7200 !important;
-  transform: scale(1.1) !important;
-  transition: 0.5s !important;
-}
-
-.logo {
-  font-size: 22px !important;
-  color: #1875f0 !important;
-  font-family: Roboto !important;
-}
-
-.logo:hover {
-  transform: none !important;
-}
-
-/* end of navbar */
-
-@import url("https://fonts.googleapis.com/css?family=Gothic+A1|Kaushan+Script|Libre+Baskerville|Lobster");
-
-.navbar-brand span {
-  color: #fed136;
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-}
-.navbar-brand {
-  color: #fff;
-  font-size: 25px;
-  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  /* end of navbar */
 }

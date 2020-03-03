@@ -6,17 +6,14 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from "reactstrap";
+import { NavLink } from "react-router-dom";
+
 import CurrentDate from "../../commons/Date";
 import "./navbar.scss";
 
-const Example = props => {
+const AppNavbar = props => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -48,7 +45,6 @@ const Example = props => {
             </a>
           </div>
           <div className="top-navbar-dropdown" id="top-navbar-dropdown">
-            {/* <!-- Eng <i className="fas fa-angle-down"></i> --> */}
             <select name="lang" className="dropdown">
               <option value="Eng">Eng</option>
               <option value="Fr">Fr</option>
@@ -60,27 +56,30 @@ const Example = props => {
       </div>
       <div className="stick-top">
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/" className="navbar-brand"><span>React</span> API
-            {/* <div class="logo second"> REACT API</div> */}
+          <NavbarBrand href="/" className="navbar-brand">
+            <span>React</span> API
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
+          <Collapse isOpen={isOpen} navbar className="mt-4">
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/cats">Cats</NavLink>
+                <NavLink to="/cats">Cats</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="/lotr">LOTR</NavLink>
+              <NavItem className="ml-3">
+                <NavLink to="/lotr">LOTR</NavLink>
               </NavItem>
             </Nav>
-            <NavbarText className="mr-3"><NavLink href="/login">Login</NavLink></NavbarText>
-            <NavbarText><NavLink href="/register">Sign up</NavLink></NavbarText>
+            <NavbarText className="mr-3">
+              <NavLink to="/login">Login</NavLink>
+            </NavbarText>
+            <NavbarText>
+              <NavLink to="/register">Sign up</NavLink>
+            </NavbarText>
           </Collapse>
         </Navbar>
       </div>
-  
     </div>
   );
 };
 
-export default Example;
+export default AppNavbar;

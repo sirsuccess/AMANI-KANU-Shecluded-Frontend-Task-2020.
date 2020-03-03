@@ -6,11 +6,10 @@ import Navbar from "../components/features/navbar/navbar";
 const Home = lazy(() => import("../views/home/Home"));
 const Cats = lazy(() => import("../views/cats/CatPage"));
 const LOTR = lazy(() => import("../views/LOTR/LOTRpage"));
-// const ContactUs = lazy(() => import("../views/home"));
+const Login = lazy(() => import("../views/login/Login"));
 // const About = lazy(() => import("../views/home"));
 
 const App = () => (
-  
   <Router>
     <Suspense fallback={<Spinner />}>
       <Navbar />
@@ -18,9 +17,9 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/cats" component={Cats} />
         <Route exact path="/lotr" component={LOTR} />
+        <Route exact path="/login" component={Login} />
         <Route component={NotFound} />
-        {/* <Route path="/about" component={About} />
-        <Route path="/contact" component={ContactUs} /> */}
+        {/* <Route path="/contact" component={Login} /> */}
       </Switch>
     </Suspense>
   </Router>
