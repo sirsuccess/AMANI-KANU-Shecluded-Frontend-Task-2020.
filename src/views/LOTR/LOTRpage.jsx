@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Pagination from "react-js-pagination";
 import { useDispatch, useSelector } from "react-redux";
+import InViewMonitor from "react-inview-monitor";
 
 import { fetchLOTR } from "../../redux/actions/LOTRActions";
 import Card from "../../components/commons/LOTRcard/LOTRcard";
@@ -56,7 +57,12 @@ export default function LOTRPage() {
       ) : (
         <div>
           <Search searchFunction={searchFunction} />
-          <Card cats={currentPost} />
+          <InViewMonitor
+            classNameNotInView="vis-hidden"
+            classNameInView="animated fadeInUp"
+          >
+            <Card cats={currentPost} />
+          </InViewMonitor>
           <div className="mt-5 justify-content-center align-self-center">
             <Pagination
               hideFirstLastPages
