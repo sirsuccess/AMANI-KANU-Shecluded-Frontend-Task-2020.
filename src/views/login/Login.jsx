@@ -1,9 +1,9 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <div className="d-flex mt-2 row">
+    <div className="d-flex mt-3 row">
       <form className="col-md-6">
         <h3>Sign In</h3>
 
@@ -13,6 +13,7 @@ export default function Login() {
             type="email"
             className="form-control"
             placeholder="Enter email"
+            required
           />
         </div>
 
@@ -22,6 +23,7 @@ export default function Login() {
             type="password"
             className="form-control"
             placeholder="Enter password"
+            required
           />
         </div>
 
@@ -43,6 +45,9 @@ export default function Login() {
         </button>
         <p className="forgot-password text-right">
           Forgot <Link to="/login">password?</Link>
+        </p>
+        <p className="forgot-password text-left">
+          <Link to="/register">You don't have Account? Register!</Link>
         </p>
       </form>
       <img
