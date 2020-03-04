@@ -7,7 +7,7 @@ const Home = lazy(() => import("../views/home/Home"));
 const Cats = lazy(() => import("../views/cats/CatPage"));
 const LOTR = lazy(() => import("../views/LOTR/LOTRpage"));
 const Login = lazy(() => import("../views/login/Login"));
-// const About = lazy(() => import("../views/home"));
+const Signup = lazy(() => import("../views/signup/SignUp"));
 
 const App = () => (
   <Router>
@@ -18,8 +18,8 @@ const App = () => (
         <Route exact path="/cats" component={Cats} />
         <Route exact path="/lotr" component={LOTR} />
         <Route exact path="/login" component={Login} />
+        <Route path="/register" component={Signup} />
         <Route component={NotFound} />
-        {/* <Route path="/contact" component={Login} /> */}
       </Switch>
     </Suspense>
   </Router>
